@@ -34,7 +34,7 @@
         "description": "Premium dental and cosmetology clinic offering dental implants, cosmetic dentistry, online consultations, and EMI options in Kederesepet, Vijayawada.",
         "url": "https://harshasoldev.github.io/indian-advanced-dental/",
         "telephone": "+919293922363",
-        "priceRange": "\u20b9\u20b9",
+        "priceRange": "₹₹",
         "image": "https://harshasoldev.github.io/indian-advanced-dental/og-image.jpg",
         "areaServed": ["Vijayawada", "Andhra Pradesh", "India"],
         "aggregateRating": {
@@ -372,7 +372,7 @@
             border-radius: 20px; display: flex; align-items: center;
             justify-content: center; position: relative; overflow: hidden;
         }
-        .doctor-image-frame .placeholder { color: white; font-size: 80px; font-weight: 700; font-family: 'Playfair Display', serif; opacity: 0.3; }
+        
         .doctor-image-frame .initials {
             position: absolute; font-family: 'Playfair Display', serif;
             font-weight: 700; font-size: 48px; color: white;
@@ -467,70 +467,6 @@
         footer a:hover { color: #1e88e5; }
         .footer-bottom { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; margin-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748b; }
 
-        /* Image Placeholder Styles */
-        .img-placeholder {
-            border: 2.5px dashed #bfdbfe;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #f8faff 0%, #eef4ff 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            min-height: 200px;
-            padding: 32px 20px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-        .img-placeholder::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, rgba(30,136,229,0.03), rgba(13,71,161,0.03));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .img-placeholder:hover {
-            border-color: #1e88e5;
-            box-shadow: 0 8px 30px rgba(30,136,229,0.08);
-            transform: translateY(-2px);
-        }
-        .img-placeholder:hover::before { opacity: 1; }
-        .img-placeholder .placeholder-icon {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
-            opacity: 0.6;
-        }
-        .img-placeholder .placeholder-label {
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #1e88e5;
-            letter-spacing: 0.3px;
-            position: relative;
-            z-index: 1;
-        }
-        .img-placeholder .placeholder-hint {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8rem;
-            color: #94a3b8;
-            margin-top: 6px;
-            position: relative;
-            z-index: 1;
-        }
-        .img-placeholder-lg {
-            min-height: 320px;
-        }
-        .img-placeholder-sm {
-            min-height: 160px;
-        }
-        .img-placeholder-square {
-            aspect-ratio: 3/4;
-            min-height: auto;
-            height: 100%;
-        }
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -543,10 +479,17 @@
         }
         @media (max-width: 900px) {
             .gallery-grid { grid-template-columns: 1fr; }
-            .img-placeholder-lg { min-height: 240px; }
         }
         @media (max-width: 480px) {
             .gallery-grid { grid-template-columns: 1fr; }
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 240px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
         }
 
         .whatsapp-float {
@@ -633,11 +576,11 @@
                     Trusted by 10,000+ Patients
                 </div>
                 <h1>Your Smile, Our<br><span class="highlight">Passion &amp; Precision</span></h1>
-                <p>Welcome to <strong>Indian Advanced Dental &amp; Cosmetology Clinic</strong> \u2014 Vijayawada\u2019s premier destination for international-standard dental care. Led by <strong>Dr. D. Durga Prasad</strong>, we combine advanced technology with compassionate care.</p>
+                <p>Welcome to <strong>Indian Advanced Dental &amp; Cosmetology Clinic</strong> — Vijayawada’s premier destination for international-standard dental care. Led by <strong>Dr. D. Durga Prasad</strong>, we combine advanced technology with compassionate care.</p>
                 <div class="hero-stats">
                     <div class="hero-stat"><span class="hero-stat-number"><span>10,000</span>+</span><span class="hero-stat-label">Happy Patients</span></div>
                     <div class="hero-stat"><span class="hero-stat-number"><span>15</span>+</span><span class="hero-stat-label">Years Experience</span></div>
-                    <div class="hero-stat"><span class="hero-stat-number"><span>4.8</span>\u2605</span><span class="hero-stat-label">Google Rating</span></div>
+                    <div class="hero-stat"><span class="hero-stat-number"><span>4.8</span>★</span><span class="hero-stat-label">Google Rating</span></div>
                 </div>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Book Free Consultation</a>
@@ -646,11 +589,10 @@
             </div>
             <div class="hero-visual reveal reveal-delay-2">
                 <div style="display:flex;flex-direction:column;gap:20px;width:100%;max-width:440px;">
-                    <div class="img-placeholder img-placeholder-lg" role="img" aria-label="Clinic exterior photo placeholder">
-                        <div class="placeholder-icon">📸</div>
-                        <div class="placeholder-label">Upload Clinic Exterior Photo</div>
-                        <div class="placeholder-hint">Showcase your clinic facade &amp; entrance</div>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop"
+                         alt="Indian Advanced Dental Clinic - Modern Clinic Exterior in Vijayawada"
+                         loading="lazy"
+                         style="border-radius:16px;width:100%;max-width:440px;box-shadow:0 8px 30px rgba(0,0,0,0.08);">
                     <div class="hero-card">
                         <div class="hero-card-icon">🦷</div>
                         <h3>International-Standard Care</h3>
@@ -678,14 +620,14 @@
     <section class="services" id="services" aria-label="Our Services">
         <div class="container">
             <h2 class="section-title reveal">Premium Dental Services</h2>
-            <p class="section-subtitle reveal">Comprehensive dental care solutions tailored to your needs \u2014 from routine checkups to advanced implantology.</p>
+            <p class="section-subtitle reveal">Comprehensive dental care solutions tailored to your needs — from routine checkups to advanced implantology.</p>
             <div class="services-grid">
-                <article class="service-card reveal reveal-delay-1"><div class="service-icon">\U0001f9b7</div><h3>Dental Implants</h3><p>International-standard dental implant procedures using premium titanium and zirconia materials. Permanent, natural-looking replacements that restore your smile and confidence.</p></article>
-                <article class="service-card reveal reveal-delay-2"><div class="service-icon">\u2728</div><h3>Cosmetic Dentistry</h3><p>Transform your smile with veneers, teeth whitening, smile makeovers, and aesthetic contouring. Customized treatments for a stunning, natural-looking result.</p></article>
-                <article class="service-card reveal reveal-delay-3"><div class="service-icon">\U0001fa7a</div><h3>Root Canal Treatment</h3><p>Pain-free root canal therapy using modern rotary endodontics. Save your natural teeth with precise, comfortable treatment in a relaxing environment.</p></article>
-                <article class="service-card reveal reveal-delay-1"><div class="service-icon">\U0001f9b7</div><h3>Crowns &amp; Bridges</h3><p>High-quality ceramic and zirconia crowns &amp; bridges crafted to match your natural teeth perfectly. Durable, aesthetic restorations for damaged or missing teeth.</p></article>
-                <article class="service-card reveal reveal-delay-2"><div class="service-icon">\U0001f4bb</div><h3>Online Consultation</h3><p>Free video consultations with Dr. D. Durga Prasad from the comfort of your home. Get expert advice, treatment plans, and cost estimates without visiting the clinic.</p></article>
-                <article class="service-card reveal reveal-delay-3"><div class="service-icon">\U0001f4b3</div><h3>Easy EMI Options</h3><p>Affordable dental care with flexible EMI plans. We partner with leading financial institutions to make premium dental treatments accessible to everyone.</p></article>
+                <article class="service-card reveal reveal-delay-1"><div class="service-icon">🦷</div><h3>Dental Implants</h3><p>International-standard dental implant procedures using premium titanium and zirconia materials. Permanent, natural-looking replacements that restore your smile and confidence.</p></article>
+                <article class="service-card reveal reveal-delay-2"><div class="service-icon">✨</div><h3>Cosmetic Dentistry</h3><p>Transform your smile with veneers, teeth whitening, smile makeovers, and aesthetic contouring. Customized treatments for a stunning, natural-looking result.</p></article>
+                <article class="service-card reveal reveal-delay-3"><div class="service-icon">🩺</div><h3>Root Canal Treatment</h3><p>Pain-free root canal therapy using modern rotary endodontics. Save your natural teeth with precise, comfortable treatment in a relaxing environment.</p></article>
+                <article class="service-card reveal reveal-delay-1"><div class="service-icon">🦷</div><h3>Crowns &amp; Bridges</h3><p>High-quality ceramic and zirconia crowns &amp; bridges crafted to match your natural teeth perfectly. Durable, aesthetic restorations for damaged or missing teeth.</p></article>
+                <article class="service-card reveal reveal-delay-2"><div class="service-icon">💻</div><h3>Online Consultation</h3><p>Free video consultations with Dr. D. Durga Prasad from the comfort of your home. Get expert advice, treatment plans, and cost estimates without visiting the clinic.</p></article>
+                <article class="service-card reveal reveal-delay-3"><div class="service-icon">💳</div><h3>Easy EMI Options</h3><p>Affordable dental care with flexible EMI plans. We partner with leading financial institutions to make premium dental treatments accessible to everyone.</p></article>
             </div>
         </div>
     </section>
@@ -693,23 +635,23 @@
     <section class="gallery" id="gallery" aria-label="Clinic Gallery">
         <div class="container">
             <h2 class="section-title reveal">Our Clinic Gallery</h2>
-            <p class="section-subtitle reveal">Add photos here to showcase your clinic, equipment, and treatment results.</p>
+            <p class="section-subtitle reveal">Take a virtual tour of our state-of-the-art dental facility in Kederesepet, Vijayawada.</p>
             <div class="gallery-grid">
-                <div class="img-placeholder reveal reveal-delay-1" role="img" aria-label="Treatment room photo placeholder">
-                    <div class="placeholder-icon">📸</div>
-                    <div class="placeholder-label">Add Treatment Room Images</div>
-                    <div class="placeholder-hint">Show your modern, sterilized treatment rooms</div>
-                </div>
-                <div class="img-placeholder reveal reveal-delay-2" role="img" aria-label="Dental implant results placeholder">
-                    <div class="placeholder-icon">📸</div>
-                    <div class="placeholder-label">Share Dental Implant Results</div>
-                    <div class="placeholder-hint">Display before/after implant case photos</div>
-                </div>
-                <div class="img-placeholder reveal reveal-delay-3" role="img" aria-label="Equipment photo placeholder">
-                    <div class="placeholder-icon">📸</div>
-                    <div class="placeholder-label">Show Our Equipment/Facilities</div>
-                    <div class="placeholder-hint">Highlight advanced dental technology &amp; equipment</div>
-                </div>
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&h=400&fit=crop"
+                         alt="Modern dental treatment room at Indian Advanced Dental Clinic, Vijayawada"
+                         loading="lazy"
+                         class="reveal reveal-delay-1"
+                         style="border-radius:16px;width:100%;height:100%;object-fit:cover;min-height:240px;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
+                <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=400&fit=crop"
+                         alt="Professional dental implant procedure at Indian Advanced Dental"
+                         loading="lazy"
+                         class="reveal reveal-delay-2"
+                         style="border-radius:16px;width:100%;height:100%;object-fit:cover;min-height:240px;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
+                <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop"
+                         alt="Advanced dental equipment at Indian Advanced Dental Clinic, Vijayawada"
+                         loading="lazy"
+                         class="reveal reveal-delay-3"
+                         style="border-radius:16px;width:100%;height:100%;object-fit:cover;min-height:240px;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
             </div>
         </div>
     </section>
@@ -717,17 +659,16 @@
     <section class="doctor" id="doctor" aria-label="Meet Our Doctor">
         <div class="container">
             <div class="doctor-image reveal">
-                <div class="doctor-image-frame img-placeholder img-placeholder-square" style="background:linear-gradient(135deg, #f8faff, #eef4ff);border:2.5px dashed #bfdbfe;">
-                    <div class="placeholder-icon" style="font-size:3rem;opacity:0.7;">📸</div>
-                    <div class="placeholder-label" style="font-size:1.1rem;">Doctor's Profile Photo Here</div>
-                    <div class="placeholder-hint">Upload Dr. Durga Prasad's photo</div>
-                </div>
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=500&fit=crop"
+                         alt="Dr. D. Durga Prasad - Chief Dental Surgeon at Indian Advanced Dental Clinic, Vijayawada"
+                         loading="lazy"
+                         style="width:100%;height:100%;object-fit:cover;border-radius:20px;box-shadow:0 8px 30px rgba(0,0,0,0.1);">
             </div>
             <div class="doctor-content reveal reveal-delay-2">
                 <div class="doctor-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/></svg> Chief Dental Surgeon</div>
                 <h2>Meet Your Dentist</h2>
                 <div class="doctor-name">Dr. D. Durga Prasad</div>
-                <div class="doctor-title">BDS, MDS \u2014 Implantology &amp; Cosmetic Dentistry</div>
+                <div class="doctor-title">BDS, MDS — Implantology &amp; Cosmetic Dentistry</div>
                 <p>With over 15 years of dedicated practice in dentistry, Dr. D. Durga Prasad is a leading dental surgeon in Vijayawada. His commitment to excellence, combined with advanced training in dental implantology and cosmetic dentistry, has made him the trusted choice for thousands of patients.</p>
                 <div class="doctor-credential"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>15+ years of clinical experience</span></div>
                 <div class="doctor-credential"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>10,000+ successful treatments performed</span></div>
@@ -740,12 +681,12 @@
     <section class="why-choose" id="why" aria-label="Why Choose Us">
         <div class="container">
             <h2 class="section-title reveal">Why Choose Indian Advanced Dental?</h2>
-            <p class="section-subtitle reveal">We set the standard for excellence in dental care. Here\u2019s why thousands trust us with their smiles.</p>
+            <p class="section-subtitle reveal">We set the standard for excellence in dental care. Here’s why thousands trust us with their smiles.</p>
             <div class="why-grid">
-                <div class="why-card reveal reveal-delay-1"><div class="why-icon">\U0001f30d</div><h3>International Standards</h3><p>We follow global best practices in dental care, using world-class materials and sterilization protocols that meet ISO standards.</p></div>
-                <div class="why-card reveal reveal-delay-2"><div class="why-icon">\u2764\ufe0f</div><h3>10,000+ Trusted Patients</h3><p>Our track record of 10,000+ satisfied patients speaks volumes about our commitment to quality care and outstanding results.</p></div>
-                <div class="why-card reveal reveal-delay-3"><div class="why-icon">\U0001f4de</div><h3>Free Online Consultation</h3><p>Get expert dental advice without leaving your home. Our free video consultation service makes quality dental care accessible.</p></div>
-                <div class="why-card reveal reveal-delay-4"><div class="why-icon">\U0001f4b3</div><h3>Easy EMI Options</h3><p>Quality dental care should be affordable. We offer flexible EMI plans with zero-cost EMI options on all major treatments.</p></div>
+                <div class="why-card reveal reveal-delay-1"><div class="why-icon">🌍</div><h3>International Standards</h3><p>We follow global best practices in dental care, using world-class materials and sterilization protocols that meet ISO standards.</p></div>
+                <div class="why-card reveal reveal-delay-2"><div class="why-icon">❤️</div><h3>10,000+ Trusted Patients</h3><p>Our track record of 10,000+ satisfied patients speaks volumes about our commitment to quality care and outstanding results.</p></div>
+                <div class="why-card reveal reveal-delay-3"><div class="why-icon">📞</div><h3>Free Online Consultation</h3><p>Get expert dental advice without leaving your home. Our free video consultation service makes quality dental care accessible.</p></div>
+                <div class="why-card reveal reveal-delay-4"><div class="why-icon">💳</div><h3>Easy EMI Options</h3><p>Quality dental care should be affordable. We offer flexible EMI plans with zero-cost EMI options on all major treatments.</p></div>
             </div>
         </div>
     </section>
@@ -755,15 +696,15 @@
             <div class="stats-row reveal">
                 <div class="stat-item"><div class="stat-number"><span>10,000</span>+</div><div class="stat-label">Happy Patients</div></div>
                 <div class="stat-item"><div class="stat-number"><span>15</span>+</div><div class="stat-label">Years Experience</div></div>
-                <div class="stat-item"><div class="stat-number"><span>4.8</span>\u2605</div><div class="stat-label">Google Rating</div></div>
+                <div class="stat-item"><div class="stat-number"><span>4.8</span>★</div><div class="stat-label">Google Rating</div></div>
                 <div class="stat-item"><div class="stat-number"><span>1,250</span>+</div><div class="stat-label">5-Star Reviews</div></div>
             </div>
             <h2 class="section-title reveal">What Our Patients Say</h2>
             <p class="section-subtitle reveal">Real stories from real patients who trusted us with their smiles.</p>
             <div class="testimonial-grid">
-                <div class="testimonial-card reveal reveal-delay-1"><div class="testimonial-stars">\u2605\u2605\u2605\u2605\u2605</div><p class="testimonial-text">"Dr. Durga Prasad is simply the best dentist in Vijayawada. I got dental implants done here and the results are amazing. The entire team is professional and caring. Highly recommend!"</p><div class="testimonial-author"><div class="testimonial-avatar">SP</div><div><div class="testimonial-name">Srinivas P.</div><div class="testimonial-location">Vijayawada</div></div></div></div>
-                <div class="testimonial-card reveal reveal-delay-2"><div class="testimonial-stars">\u2605\u2605\u2605\u2605\u2605</div><p class="testimonial-text">"I was very nervous about my root canal but the team made me feel completely at ease. Pain-free procedure and excellent follow-up care. Thank you, Dr. Durga Prasad!"</p><div class="testimonial-author"><div class="testimonial-avatar">LK</div><div><div class="testimonial-name">Lakshmi K.</div><div class="testimonial-location">Guntur</div></div></div></div>
-                <div class="testimonial-card reveal reveal-delay-3"><div class="testimonial-stars">\u2605\u2605\u2605\u2605\u2605</div><p class="testimonial-text">"The cosmetic dentistry work done here transformed my smile. The veneers look incredibly natural. I\'ve gained so much confidence. Best decision I ever made!"</p><div class="testimonial-author"><div class="testimonial-avatar">AR</div><div><div class="testimonial-name">Anjali R.</div><div class="testimonial-location">Vijayawada</div></div></div></div>
+                <div class="testimonial-card reveal reveal-delay-1"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"Dr. Durga Prasad is simply the best dentist in Vijayawada. I got dental implants done here and the results are amazing. The entire team is professional and caring. Highly recommend!"</p><div class="testimonial-author"><div class="testimonial-avatar">SP</div><div><div class="testimonial-name">Srinivas P.</div><div class="testimonial-location">Vijayawada</div></div></div></div>
+                <div class="testimonial-card reveal reveal-delay-2"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"I was very nervous about my root canal but the team made me feel completely at ease. Pain-free procedure and excellent follow-up care. Thank you, Dr. Durga Prasad!"</p><div class="testimonial-author"><div class="testimonial-avatar">LK</div><div><div class="testimonial-name">Lakshmi K.</div><div class="testimonial-location">Guntur</div></div></div></div>
+                <div class="testimonial-card reveal reveal-delay-3"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"The cosmetic dentistry work done here transformed my smile. The veneers look incredibly natural. I\'ve gained so much confidence. Best decision I ever made!"</p><div class="testimonial-author"><div class="testimonial-avatar">AR</div><div><div class="testimonial-name">Anjali R.</div><div class="testimonial-location">Vijayawada</div></div></div></div>
             </div>
         </div>
     </section>
@@ -775,12 +716,12 @@
             <div class="contact-grid">
                 <div class="contact-info reveal">
                     <h3>Visit Our Clinic</h3>
-                    <p>We\u2019re conveniently located in Kederesepet, Vijayawada. Walk in or book an appointment online.</p>
+                    <p>We’re conveniently located in Kederesepet, Vijayawada. Walk in or book an appointment online.</p>
                     <div class="contact-details">
                         <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong>Address</strong><span>Kederesepet, Near Old Bus Stand, Vijayawada, Andhra Pradesh 520001</span></div></div>
                         <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg><div><strong>Phone</strong><span>+91 92939 22363</span></div></div>
                         <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><div><strong>Email</strong><span>contact@indianadvanceddental.com</span></div></div>
-                        <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><strong>Working Hours</strong><span>Mon\u2013Sat: 9:00 AM \u2013 8:00 PM | Sun: 10:00 AM \u2013 2:00 PM</span></div></div>
+                        <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><strong>Working Hours</strong><span>Mon–Sat: 9:00 AM – 8:00 PM | Sun: 10:00 AM – 2:00 PM</span></div></div>
                     </div>
                     <div class="contact-cta">
                         <a href="tel:+919293922363" class="btn btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Call Now</a>
@@ -800,12 +741,12 @@
         <div class="container">
             <div>
                 <h4>Indian Advanced Dental &amp; Cosmetology Clinic</h4>
-                <p>Vijayawada\u2019s premier destination for international-standard dental care. Led by Dr. D. Durga Prasad with 15+ years of experience and 10,000+ happy patients.</p>
+                <p>Vijayawada’s premier destination for international-standard dental care. Led by Dr. D. Durga Prasad with 15+ years of experience and 10,000+ happy patients.</p>
                 <p style="margin-top: 12px;"><a href="https://wa.me/919293922363" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp: +91 92939 22363</a></p>
             </div>
             <div><h4>Quick Links</h4><ul><li><a href="#services">Services</a></li><li><a href="#doctor">Our Doctor</a></li><li><a href="#why">Why Us</a></li><li><a href="#testimonials">Testimonials</a></li><li><a href="#contact">Contact</a></li></ul></div>
             <div><h4>Services</h4><ul><li><a href="#services">Dental Implants</a></li><li><a href="#services">Cosmetic Dentistry</a></li><li><a href="#services">Root Canal</a></li><li><a href="#services">Crowns &amp; Bridges</a></li><li><a href="#services">Online Consultation</a></li></ul></div>
-            <div><h4>Contact</h4><ul><li>Kederesepet, Vijayawada</li><li>+91 92939 22363</li><li>Mon\u2013Sat: 9AM\u20138PM</li><li>Sun: 10AM\u20132PM</li></ul></div>
+            <div><h4>Contact</h4><ul><li>Kederesepet, Vijayawada</li><li>+91 92939 22363</li><li>Mon–Sat: 9AM–8PM</li><li>Sun: 10AM–2PM</li></ul></div>
             <div class="footer-bottom"><span>&copy; 2026 Indian Advanced Dental &amp; Cosmetology Clinic. All rights reserved.</span><span>Designed with care for Vijayawada</span></div>
         </div>
     </footer>
