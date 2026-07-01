@@ -33,7 +33,7 @@
         "name": "Indian Advanced Dental &amp; Cosmetology Clinic",
         "description": "Premium dental and cosmetology clinic offering dental implants, cosmetic dentistry, online consultations, and EMI options in Kederesepet, Vijayawada.",
         "url": "https://harshasoldev.github.io/indian-advanced-dental/",
-        "telephone": "+91XXXXXXXXXX",
+        "telephone": "+919293922363",
         "priceRange": "\u20b9\u20b9",
         "image": "https://harshasoldev.github.io/indian-advanced-dental/og-image.jpg",
         "areaServed": ["Vijayawada", "Andhra Pradesh", "India"],
@@ -467,6 +467,88 @@
         footer a:hover { color: #1e88e5; }
         .footer-bottom { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; margin-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748b; }
 
+        /* Image Placeholder Styles */
+        .img-placeholder {
+            border: 2.5px dashed #bfdbfe;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #f8faff 0%, #eef4ff 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 200px;
+            padding: 32px 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .img-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(30,136,229,0.03), rgba(13,71,161,0.03));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .img-placeholder:hover {
+            border-color: #1e88e5;
+            box-shadow: 0 8px 30px rgba(30,136,229,0.08);
+            transform: translateY(-2px);
+        }
+        .img-placeholder:hover::before { opacity: 1; }
+        .img-placeholder .placeholder-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            opacity: 0.6;
+        }
+        .img-placeholder .placeholder-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1e88e5;
+            letter-spacing: 0.3px;
+            position: relative;
+            z-index: 1;
+        }
+        .img-placeholder .placeholder-hint {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-top: 6px;
+            position: relative;
+            z-index: 1;
+        }
+        .img-placeholder-lg {
+            min-height: 320px;
+        }
+        .img-placeholder-sm {
+            min-height: 160px;
+        }
+        .img-placeholder-square {
+            aspect-ratio: 3/4;
+            min-height: auto;
+            height: 100%;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 10px;
+        }
+        .gallery {
+            padding: 60px 0 80px;
+            background: #ffffff;
+        }
+        @media (max-width: 900px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .img-placeholder-lg { min-height: 240px; }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+
         .whatsapp-float {
             position: fixed; bottom: 24px; right: 24px; z-index: 999;
             width: 56px; height: 56px; background: #25D366; border-radius: 50%;
@@ -559,19 +641,26 @@
                 </div>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Book Free Consultation</a>
-                    <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I'd%20like%20to%20book%20a%20free%20consultation" target="_blank" rel="noopener" class="btn btn-whatsapp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Now</a>
+                    <a href="https://wa.me/919293922363?text=Hi!%20I'd%20like%20to%20book%20a%20free%20consultation" target="_blank" rel="noopener" class="btn btn-whatsapp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Now</a>
                 </div>
             </div>
             <div class="hero-visual reveal reveal-delay-2">
-                <div class="hero-card">
-                    <div class="hero-card-icon">\U0001f9b7</div>
-                    <h3>International-Standard Care</h3>
-                    <p>Premium dental implants &amp; cosmetic dentistry with advanced technology and personalized treatment plans.</p>
-                    <ul class="features">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Free Online Consultation</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Easy EMI Options Available</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 10,000+ Happy Patients</li>
-                    </ul>
+                <div style="display:flex;flex-direction:column;gap:20px;width:100%;max-width:440px;">
+                    <div class="img-placeholder img-placeholder-lg" role="img" aria-label="Clinic exterior photo placeholder">
+                        <div class="placeholder-icon">📸</div>
+                        <div class="placeholder-label">Upload Clinic Exterior Photo</div>
+                        <div class="placeholder-hint">Showcase your clinic facade &amp; entrance</div>
+                    </div>
+                    <div class="hero-card">
+                        <div class="hero-card-icon">🦷</div>
+                        <h3>International-Standard Care</h3>
+                        <p>Premium dental implants &amp; cosmetic dentistry with advanced technology and personalized treatment plans.</p>
+                        <ul class="features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Free Online Consultation</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Easy EMI Options Available</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 10,000+ Happy Patients</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -601,10 +690,38 @@
         </div>
     </section>
 
+    <section class="gallery" id="gallery" aria-label="Clinic Gallery">
+        <div class="container">
+            <h2 class="section-title reveal">Our Clinic Gallery</h2>
+            <p class="section-subtitle reveal">Add photos here to showcase your clinic, equipment, and treatment results.</p>
+            <div class="gallery-grid">
+                <div class="img-placeholder reveal reveal-delay-1" role="img" aria-label="Treatment room photo placeholder">
+                    <div class="placeholder-icon">📸</div>
+                    <div class="placeholder-label">Add Treatment Room Images</div>
+                    <div class="placeholder-hint">Show your modern, sterilized treatment rooms</div>
+                </div>
+                <div class="img-placeholder reveal reveal-delay-2" role="img" aria-label="Dental implant results placeholder">
+                    <div class="placeholder-icon">📸</div>
+                    <div class="placeholder-label">Share Dental Implant Results</div>
+                    <div class="placeholder-hint">Display before/after implant case photos</div>
+                </div>
+                <div class="img-placeholder reveal reveal-delay-3" role="img" aria-label="Equipment photo placeholder">
+                    <div class="placeholder-icon">📸</div>
+                    <div class="placeholder-label">Show Our Equipment/Facilities</div>
+                    <div class="placeholder-hint">Highlight advanced dental technology &amp; equipment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="doctor" id="doctor" aria-label="Meet Our Doctor">
         <div class="container">
             <div class="doctor-image reveal">
-                <div class="doctor-image-frame"><div class="initials">Dr. DP</div><div class="placeholder">\U0001f9b7</div></div>
+                <div class="doctor-image-frame img-placeholder img-placeholder-square" style="background:linear-gradient(135deg, #f8faff, #eef4ff);border:2.5px dashed #bfdbfe;">
+                    <div class="placeholder-icon" style="font-size:3rem;opacity:0.7;">📸</div>
+                    <div class="placeholder-label" style="font-size:1.1rem;">Doctor's Profile Photo Here</div>
+                    <div class="placeholder-hint">Upload Dr. Durga Prasad's photo</div>
+                </div>
             </div>
             <div class="doctor-content reveal reveal-delay-2">
                 <div class="doctor-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/></svg> Chief Dental Surgeon</div>
@@ -661,13 +778,13 @@
                     <p>We\u2019re conveniently located in Kederesepet, Vijayawada. Walk in or book an appointment online.</p>
                     <div class="contact-details">
                         <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong>Address</strong><span>Kederesepet, Near Old Bus Stand, Vijayawada, Andhra Pradesh 520001</span></div></div>
-                        <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg><div><strong>Phone</strong><span>+91 XXXXXXXXXX</span></div></div>
+                        <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg><div><strong>Phone</strong><span>+91 92939 22363</span></div></div>
                         <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><div><strong>Email</strong><span>contact@indianadvanceddental.com</span></div></div>
                         <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><strong>Working Hours</strong><span>Mon\u2013Sat: 9:00 AM \u2013 8:00 PM | Sun: 10:00 AM \u2013 2:00 PM</span></div></div>
                     </div>
                     <div class="contact-cta">
-                        <a href="tel:+91XXXXXXXXXX" class="btn btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Call Now</a>
-                        <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I'd%20like%20to%20book%20a%20free%20consultation%20at%20Indian%20Advanced%20Dental" target="_blank" rel="noopener" class="btn btn-whatsapp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us</a>
+                        <a href="tel:+919293922363" class="btn btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Call Now</a>
+                        <a href="https://wa.me/919293922363?text=Hi!%20I'd%20like%20to%20book%20a%20free%20consultation%20at%20Indian%20Advanced%20Dental" target="_blank" rel="noopener" class="btn btn-whatsapp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us</a>
                     </div>
                 </div>
                 <div class="reveal reveal-delay-2">
@@ -684,16 +801,16 @@
             <div>
                 <h4>Indian Advanced Dental &amp; Cosmetology Clinic</h4>
                 <p>Vijayawada\u2019s premier destination for international-standard dental care. Led by Dr. D. Durga Prasad with 15+ years of experience and 10,000+ happy patients.</p>
-                <p style="margin-top: 12px;"><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp: +91 XXXXXXXXXX</a></p>
+                <p style="margin-top: 12px;"><a href="https://wa.me/919293922363" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp: +91 92939 22363</a></p>
             </div>
             <div><h4>Quick Links</h4><ul><li><a href="#services">Services</a></li><li><a href="#doctor">Our Doctor</a></li><li><a href="#why">Why Us</a></li><li><a href="#testimonials">Testimonials</a></li><li><a href="#contact">Contact</a></li></ul></div>
             <div><h4>Services</h4><ul><li><a href="#services">Dental Implants</a></li><li><a href="#services">Cosmetic Dentistry</a></li><li><a href="#services">Root Canal</a></li><li><a href="#services">Crowns &amp; Bridges</a></li><li><a href="#services">Online Consultation</a></li></ul></div>
-            <div><h4>Contact</h4><ul><li>Kederesepet, Vijayawada</li><li>+91 XXXXXXXXXX</li><li>Mon\u2013Sat: 9AM\u20138PM</li><li>Sun: 10AM\u20132PM</li></ul></div>
+            <div><h4>Contact</h4><ul><li>Kederesepet, Vijayawada</li><li>+91 92939 22363</li><li>Mon\u2013Sat: 9AM\u20138PM</li><li>Sun: 10AM\u20132PM</li></ul></div>
             <div class="footer-bottom"><span>&copy; 2026 Indian Advanced Dental &amp; Cosmetology Clinic. All rights reserved.</span><span>Designed with care for Vijayawada</span></div>
         </div>
     </footer>
 
-    <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I'd%20like%20to%20book%20a%20free%20consultation%20at%20Indian%20Advanced%20Dental" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/919293922363?text=Hi!%20I'd%20like%20to%20book%20a%20free%20consultation%20at%20Indian%20Advanced%20Dental" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
